@@ -111,6 +111,51 @@ ng generate component products
 { path: 'products', component: ProductsComponent }
 
 
+✅ Problemas enfrentados
+
+1. Diferencias entre la estructura original y la generada por Ionic
+
+Al crear el proyecto con ionic start, la estructura generada por defecto no coincidía con el diseño planificado en la unidad 2.
+
+Fue necesario reorganizar carpetas, crear componentes y ajustar rutas para que coincidieran conceptualmente con el mapa de navegación.
+
+2. Configuración inicial de Angular CLI
+
+Al ejecutar ionic serve, surgió el error "ng no se reconoce como un comando", porque el proyecto no estaba identificado como workspace.
+
+Esto obligó a crear un proyecto Ionic completamente nuevo y sobre él integrar manualmente la estructura de navegación.
+
+3. Enrutamiento y lazy loading
+
+El sistema de rutas de Ionic utiliza lazy loading para mejorar el rendimiento.
+
+Fue necesario comprender la estructura con módulos independientes por página (home.module.ts, login.module.ts, etc.) para implementar la navegación correctamente.
+
+4. Problemas de compatibilidad entre Angular e Ionic
+
+Algunas importaciones necesarias para los componentes (IonMenu, IonRouterOutlet, IonHeader, etc.) requirieron revisar documentación actualizada.
+
+Fue necesario corregir importaciones duplicadas o incorrectas generadas por defecto.
+
+5. Estilos no aplicados
+
+Los estilos base debían instalarse manualmente porque el proyecto no incluía el CSS global.
+
+Hubo que crear los archivos .scss faltantes y aplicar estilos mínimos para mantener coherencia con el diseño conceptual.
+
+6. Organización del proyecto para que el profesor pueda ejecutarlo
+
+El proyecto debía funcionar sin requerir instalaciones adicionales.
+
+Fue necesario crear un README detallado explicando dependencias, comandos de instalación y estructura de carpetas.
+
+7. Estructura real del diseño vs. prototipo
+
+El diseño visual original no se replicó en esta fase porque la tarea exige solo la “cáscara” de navegación.
+
+Esto obligó a separar funcionalidad de diseño y dejar placeholders en las vistas.
+
+
 
 Conclusión
 
@@ -121,6 +166,7 @@ Este repositorio te entrega:
 ✔ Layout base con header / contenido / footer
 ✔ Carpetas organizadas por pantalla
 ✔ Archivos listos para expandir
+
 
 ❗ El diseño visual NO está finalizado.
 El objetivo de este proyecto es entregar la estructura de navegación funcional, no la apariencia final.
