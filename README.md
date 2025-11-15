@@ -1,5 +1,16 @@
 README – Estructura de Navegación en Angular (KIKI App)
 
+REQUISITOS CLAVES PARA EJECUTAR ESTE PROYECTO
+
+Node.js (obligatorio) (ULTIMA VERSIÓN ESTABLE)
+
+Ionic CLI (obligatorio) (ULTIMA VERSIÓN ESTABLE)
+
+Angular CLI (solo se usa dentro del proyecto, pero recomendada global)
+
+Git (para clonar y subir el proyecto)
+
+--------------------------------------------------------------------
 Este proyecto implementa una estructura de navegación modular y escalable en Angular, basada en buenas prácticas y división por pantallas/áreas, permitiendo un desarrollo más organizado y mantenible.
 
 src/
@@ -31,15 +42,21 @@ Cada carpeta representa una pantalla independiente con su propio componente y es
 
 Cómo ejecutar el proyecto
 
-1 Instalar dependencias
+1 Situarse en la raiz del proyecto
+
+cd kiki
+
+2 Instalar dependencias
 
 npm install
 
-2 Ejecutar el servidor local
+3 Ejecutar el servidor local
 
 ionic serve
 
 La app se abrirá automáticamente
+
+----------------------------------------------------------
 
 Navegación (Routing)
 
@@ -67,6 +84,7 @@ export const routes: Routes = [
   }...
 
 
+-------------------------------------------------------------------
 Estilos
 
 Cada componente posee su propio archivo .scss, por ejemplo:
@@ -98,6 +116,7 @@ ion-content {
 Nota: Los estilos incluidos son básicos y solo cumplen un propósito demostrativo.
 No representan el diseño oficial final
 
+-----------------------------------------------------------------------
 
 Cómo agregar nuevas pantallas
 
@@ -110,6 +129,8 @@ ng generate component products
 3.Agregar la ruta en app.routes.ts:
 { path: 'products', component: ProductsComponent }
 
+
+----------------------------------------------------------------------
 
 ✅ Problemas enfrentados
 
@@ -155,7 +176,7 @@ El diseño visual original no se replicó en esta fase porque la tarea exige sol
 
 Esto obligó a separar funcionalidad de diseño y dejar placeholders en las vistas.
 
-
+-------------------------------------------------------------------
 
 Conclusión
 
